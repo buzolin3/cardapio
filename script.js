@@ -40,12 +40,12 @@ function mostrarBebidas() {
     });
 }
 
-function produto(nomeProduto, valorProduto) {
+function produto(nomeProduto , valorProduto) {
     var produtosAdicionados = document.getElementById("produtosAdicionados");
     var mensagemProduto = document.createElement("p");
     mensagemProduto.id = "produtoCarrinho"
     mensagemProduto.textContent = "1 - " + nomeProduto;
-    carrinho.push({ nome: nomeProduto, valor: valorProduto });
+    carrinho.push("%0a" + nomeProduto);
     produtosAdicionados.appendChild(mensagemProduto);
 
     numero++;
@@ -72,6 +72,8 @@ function produto(nomeProduto, valorProduto) {
 function enviarPedido() {
     // Aqui você pode enviar o carrinho para o backend ou fazer o que precisar com os produtos
     var observacao = document.getElementById("observacao").value;
+    var nome = document.getElementById("nome").value;
+    var celular = document.getElementById("celular").value;
     var cartaoRadio = document.getElementById("flexRadioDefault2");
     var dinheiroRadio = document.getElementById("flexRadioDefault1");
     var troco = document.getElementById("troco").value;
@@ -80,24 +82,36 @@ function enviarPedido() {
     var rua = document.getElementById("rua").value;
     var numeroCasa = document.getElementById("numeroCasa").value;
     var complemento = document.getElementById("complemento").value;
-
-
-
+    var link = document.getElementById("linkPedido");
+    
     if(cartaoRadio.checked){
         opcaoPagamento = "Cartão "
     } else if(dinheiroRadio.checked) {
-        opcaoPagamento = "Dinheiro " + "\nTroco para: " + troco;
+        opcaoPagamento = "Dinheiro " + "%0a" + "%0a" + "Troco para: " + troco ;
     }
 
-    console.log("Carrinho:", carrinho, "\nObservação: ", observacao, "\nValor a pagar: ", totalCompra, "\nOpção Pagamento: ", opcaoPagamento);
-    console.log("Bairro: ", bairro, "\nRua: ", rua, "\nNumero Casa: ", numeroCasa, "\nComplemento: ", complemento);
+    link.href = "https://api.whatsapp.com/send/?phone=16996340902&text=" +
+    "Pedido" + "%0a" + 
+    "%0a" + "Nome do Cliente: " + nome + "%0a" +
+    "%0a" + "Celular: " + celular + "%0a" +
+    "%0a" + "Produtos Selecionados: " + carrinho + "%0a" +
+    "%0a" + "Observação: " + observacao + "%0a" +
+    "%0a" + "Valor a pagar: " + totalCompra +  "%0a" +
+    "%0a" + "Opção Pagamento: " + opcaoPagamento + "%0a" +
+    "%0a" + "Bairro: " + bairro + "%0a" +
+    "%0a" + "Rua: " + rua + "%0a" +
+    "%0a" + "Numero Casa: " + numeroCasa + "%0a" +
+    "%0a" + "Complemento: " + complemento; "%0a" ;
 
 }
 
-/*
-function enviarPedido() {
-    var produtoCarrinho = document.getElementById("produtoCarrinho").value
-    var observacao = document.getElementById("observacao").value;
-    console.log("Produtos Selecionados: " + produtoCarrinho + "\nObservação: " + observacao);
-}
-*/
+/*console.log(
+    "Carrinho:", carrinho, 
+    "\nObservação: ", observacao, 
+    "\nValor a pagar: ", totalCompra, 
+    "\nOpção Pagamento: ", opcaoPagamento);
+    console.log(
+    "Bairro: ", bairro, 
+    "\nRua: ", rua, 
+    "\nNumero Casa: ", numeroCasa, 
+    "\nComplemento: ", complemento); */

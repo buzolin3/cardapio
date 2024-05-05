@@ -116,6 +116,9 @@ p {
     justify-content: center;
 }
 
+.btn-enviar{
+    margin-top: 20px;
+}
 
 .button-prod {
     background-color: white;
@@ -242,8 +245,27 @@ p {
     color: red;
 }
 
+.nome{
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    width: 180px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.celular{
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    width: 110px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+
 .valor {
-    padding-top: 10px;
+    padding-bottom: 20px;
     font-size: 18px;
     font-weight: 500;
 }
@@ -296,7 +318,7 @@ p {
     padding: 5px;
     border-radius: 5px;
     margin-bottom: 10px;
-    font-size: 12px;
+    font-size: 11px;
 }
 
 input[type=number]::-webkit-inner-spin-button {

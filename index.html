@@ -41,7 +41,6 @@
         </div>
         <div class="offcanvas-body text-center">
 
-            <form autocomplete="on" id="form-endereco">
                 <div>
                     <p class="carrinho" id="produtosAdicionados">Produtos Selecionados:</p>
                     <p>Observação:</p>
@@ -49,22 +48,17 @@
                 </div>
 
                 <hr>
-                <div class="text-start">
-                    <p>Selecione a forma de Pagamento:</p>
-                    <div class="form-check text-start">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
-                            checked>
-                        <label class="form-check-label " for="flexRadioDefault2"> Cartão </label>
-                    </div>
-                    <div class="form-check text-start">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label " for="flexRadioDefault1"> Dinheiro </label>
-                    </div>
-                    <label>Troco para:</label>
-                    <input type="number" placeholder="R$" class="troco text-start" id="troco">
-                    <p class="taxa-entrega"> Taxa de Entrega: R$ 7,00</p>
-                    <div class="valor" id="total">Valor a Pagar:</div>
+                <div class="text-center">
+                    <h5>Dados do cliente</h5>
+                    <label>Nome: </label>
+                    <br>
+                    <input type="text" placeholder="Nome:" id="nome" class="nome"> 
+                    <br>
+                    <label>Celular: </label>
+                    <br>
+                    <input type="number" placeholder="Celular" id="celular" class="celular">
                 </div>
+
 
                 <hr>
                 <div>
@@ -84,9 +78,28 @@
                     <label>Complemento:</label>
                     <input type="text" placeholder="Complemento" id="complemento" class="endereco">
                     <br>
-                    <button type="button" class="btn btn-primary" onclick="enviarPedido()"> Enviar Pedido </button>
+                    <p class="taxa-entrega"> Taxa de Entrega: R$ 7,00</p>
                 </div>
-            </form>
+
+                <hr>
+                <div class="valor" id="total">Valor a Pagar:</div>
+                <div class="text-start">
+                    <p>Selecione a forma de Pagamento:</p>
+                    <div class="form-check text-start">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                            checked>
+                        <label class="form-check-label " for="flexRadioDefault2"> Cartão </label>
+                    </div>
+                    <div class="form-check text-start">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label " for="flexRadioDefault1"> Dinheiro </label>
+                    </div>
+                    <label>Troco para:</label>
+                    <input type="number" placeholder="R$" class="troco text-start" id="troco">
+                </div>
+                <button class="btn btn-primary btn-enviar" onclick="enviarPedido()">
+                    <a href="" id="linkPedido" class="btn-enviar" >Enviar Pedido</a>
+                </button>
         </div>
         <br>
     </div>
