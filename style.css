@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
+/* Cores Padrão */
 :root {
     --cor-fundo: rgb(182, 0, 0);
     --cor-botao: rgb(202, 0, 0);
@@ -7,10 +7,11 @@
     --cor-fundo-dark: rgb(140, 0, 0);
     --cor-botao-dark: rgb(140, 0, 0);
     --cor-titulo-dark: rgb(255, 208, 0);
-
-
 }
 
+
+
+/*Css Página inteira / arrumando bootstrap*/
 * {
     margin: 0;
     padding: 0;
@@ -20,6 +21,18 @@ body {
     font-family: "Montserrat", sans-serif;
     ;
     background-color: rgb(250, 250, 250);
+}
+
+p {
+    margin-bottom: 0px;
+}
+
+.p-2 {
+    padding: 0rem !important;
+}
+
+.mb-3 {
+    margin-bottom: 0rem !important;
 }
 
 [data-bs-theme="dark"] {
@@ -57,25 +70,16 @@ body {
     }
 }
 
+
+
+/* NavBar CSS */
 .navbar {
     background-color: var(--cor-fundo);
     color: white;
 }
 
-p {
-    margin-bottom: 0px;
-}
-
-.p-2 {
-    padding: 0rem !important;
-}
-
 .navbar-brand {
     margin-right: 0px;
-}
-
-.mb-3 {
-    margin-bottom: 0rem !important;
 }
 
 .titulo_nav {
@@ -84,6 +88,9 @@ p {
     text-shadow: 0px 0px 8px black
 }
 
+
+
+/* Menu modo noturno */
 .div_subtitulo {
     margin: 10px;
 }
@@ -98,6 +105,15 @@ p {
 
 }
 
+.form-switch .form-check-input {
+    margin-right: 10px;
+    width: 2.5rem;
+    height: 1.4rem;
+}
+
+
+
+/*Linhas / Todas */
 .linha {
     width: 200px;
     margin: 30px auto;
@@ -105,21 +121,22 @@ p {
     opacity: 100;
 }
 
-.form-switch .form-check-input {
-    margin-right: 10px;
-    width: 2.5rem;
-    height: 1.4rem;
-}
 
+
+/*Botões Mostrar Produtos*/
 .btn-mostrar {
     display: flex;
     justify-content: center;
 }
 
-.btn-enviar{
-    margin-top: 20px;
+.col {
+    padding: 0px;
+    margin: 0px;
 }
 
+
+
+/*Produtos*/
 .button-prod {
     background-color: white;
     border: 1px solid black;
@@ -134,22 +151,6 @@ p {
 .button-prod:hover {
     background-color: rgb(221, 221, 221);
 }
-
-.link-btn {
-    text-decoration: none;
-    color: black;
-}
-
-.btn-enviar{
-    color: white;
-    text-decoration: none;
-}
-
-.col {
-    padding: 0px;
-    margin: 0px;
-}
-
 
 .produtos {
     width: 90%;
@@ -195,7 +196,6 @@ p {
     border-radius: 10px;
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.356);
     color: white;
-
 }
 
 .item4 {
@@ -214,11 +214,24 @@ p {
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.356);
     color: white;
     font-size: 26px;
-
 }
 
 .item5:hover {
     background-color: rgb(105, 0, 0);
+}
+
+
+
+/*Carrinho*/
+.btn-enviar{
+    margin-top: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.link-btn {
+    text-decoration: none;
+    color: black;
 }
 
 .carrinho {
@@ -262,7 +275,6 @@ p {
     margin-bottom: 10px;
     font-size: 12px;
 }
-
 
 .valor {
     padding-bottom: 20px;
@@ -323,11 +335,9 @@ p {
 
 input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
-
 }
 
 input[type=number] {
     -moz-appearance: textfield;
     appearance: textfield;
-
 }

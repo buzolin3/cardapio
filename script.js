@@ -6,11 +6,15 @@ const inputCheck = document.querySelector("#modo-noturno");
 const elemento = document.querySelector("body");
 var carrinho = [];
 
+
+//Trocar modo noturno
 inputCheck.addEventListener("click", () => {
     const modo = inputCheck.checked ? "dark" : "light";
     elemento.setAttribute("data-bs-theme", modo);
 });
 
+
+//Mostrar todos produtos
 function mostrarTodos() {
     var produtos = document.querySelectorAll(".produtos");
     produtos.forEach(function (produto) {
@@ -18,6 +22,8 @@ function mostrarTodos() {
     });
 }
 
+
+//Mostrar os Lanches na tela
 function mostrarLanches() {
     var bebidas = document.querySelectorAll("#bebidas");
     var comidas = document.querySelectorAll("#lanches");
@@ -29,6 +35,8 @@ function mostrarLanches() {
     });
 }
 
+
+//Mostrar as Bebidas na tela
 function mostrarBebidas() {
     var bebidas = document.querySelectorAll("#bebidas");
     var comidas = document.querySelectorAll("#lanches");
@@ -40,6 +48,8 @@ function mostrarBebidas() {
     });
 }
 
+
+//Adicionar produtos no carrinho e Aumentar numero no icon carrinho
 function produto(nomeProduto , valorProduto) {
     var produtosAdicionados = document.getElementById("produtosAdicionados");
     var mensagemProduto = document.createElement("p");
@@ -69,8 +79,9 @@ function produto(nomeProduto , valorProduto) {
     valorTxt.textContent = "Valor a pagar:  R$ " + totalCompra.toFixed(2);
 }
 
+
+// Função enviar Pedido para Whatsapp
 function enviarPedido() {
-    // Aqui você pode enviar o carrinho para o backend ou fazer o que precisar com os produtos
     var observacao = document.getElementById("observacao").value;
     var nome = document.getElementById("nome").value;
     var celular = document.getElementById("celular").value;
@@ -90,7 +101,8 @@ function enviarPedido() {
         opcaoPagamento = "Dinheiro " + "%0a" + "%0a" + "Troco para: " + troco ;
     }
 
-    link.href = "https://api.whatsapp.com/send/?phone=16996340902&text=" +
+    //API para enviar para Whatsapp
+    link.href = "https://api.whatsapp.com/send/?phone=16997036661&text=" +
     "Pedido" + "%0a" + 
     "%0a" + "Nome do Cliente: " + nome + "%0a" +
     "%0a" + "Celular: " + celular + "%0a" +
@@ -102,16 +114,19 @@ function enviarPedido() {
     "%0a" + "Rua: " + rua + "%0a" +
     "%0a" + "Numero Casa: " + numeroCasa + "%0a" +
     "%0a" + "Complemento: " + complemento; "%0a" ;
-
 }
 
+
+//Conferindo se enviar produtos está puxando corretamente os seus respectivos valores
 /*console.log(
     "Carrinho:", carrinho, 
     "\nObservação: ", observacao, 
     "\nValor a pagar: ", totalCompra, 
     "\nOpção Pagamento: ", opcaoPagamento);
+    
     console.log(
     "Bairro: ", bairro, 
     "\nRua: ", rua, 
     "\nNumero Casa: ", numeroCasa, 
-    "\nComplemento: ", complemento); */
+    "\nComplemento: ", complemento); 
+    */
