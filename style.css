@@ -227,6 +227,10 @@ p {
     background-color: rgb(105, 0, 0);
 }
 
+.item5:active{
+    background-color: var(--cor-botao);
+}
+
 
 
 /*Carrinho*/
