@@ -7,6 +7,7 @@
     --cor-fundo-dark: rgb(140, 0, 0);
     --cor-botao-dark: rgb(140, 0, 0);
     --cor-titulo-dark: rgb(255, 208, 0);
+    --cor-botao-hover: rgb(170, 0, 0);
 }
 
 
@@ -223,8 +224,8 @@ p {
     transition: background-color 0.1s;
 }
 
-.item5:active{
-    background-color: rgb(105, 0, 0);
+.item5:hover{
+    background-color: var(--cor-botao-hover);
 }
 
 
