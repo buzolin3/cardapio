@@ -13,7 +13,7 @@
 
 <body data-bs-theme="dark">
 
-<!-- NavBar, navegação inicial -->
+    <!-- NavBar, navegação inicial -->
     <header>
         <nav class="navbar">
             <div class="container-fluid d-flex mb-3">
@@ -34,79 +34,78 @@
     </header>
 
 
-<!-- Página do carrinho -->
+    <!-- Página do carrinho -->
     <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
         aria-labelledby="offcanvasWithBothOptionsLabel">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Carrinho de Compras</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
+
         <div class="offcanvas-body text-center">
+            <div>
+                <p class="carrinho" id="produtosAdicionados">Produtos Selecionados:</p>
+                <p>Observação:</p>
+                <textarea name="observacao" class="observacao" id="observacao" cols="30" rows="5"></textarea>
+            </div>
 
-                <div>
-                    <p class="carrinho" id="produtosAdicionados">Produtos Selecionados:</p>
-                    <p>Observação:</p>
-                    <textarea name="observacao" class="observacao" id="observacao" cols="30" rows="5"></textarea>
-                </div>
+            <hr>
+            <div class="text-center">
+                <h5>Dados do cliente</h5>
+                <label>Nome: <span class="obrigatorio">* Obrigatório *</span></label>
+                <br>
+                <input type="text" placeholder="Nome:" id="nome" class="nome">
+                <br>
+                <label>Celular: <span class="obrigatorio">* Obrigatório *</span></label>
+                <br>
+                <input type="number" placeholder="Celular" id="celular" class="celular">
+            </div>
 
-                <hr>
-                <div class="text-center">
-                    <h5>Dados do cliente</h5>
-                    <label>Nome: </label>
-                    <br>
-                    <input type="text" placeholder="Nome:" id="nome" class="nome"> 
-                    <br>
-                    <label>Celular: </label>
-                    <br>
-                    <input type="number" placeholder="Celular" id="celular" class="celular">
-                </div>
+            <hr>
+            <div>
+                <p class="endereco-txt">Digite o Endereço para entrega</p>
+                <label>Bairro: <span class="obrigatorio">* Obrigatório *</span></label>
+                <br>
+                <input type="text" placeholder="Nome do Bairro" id="bairro" class="bairro" >
+                <br>
+                <label>Rua: <span class="obrigatorio">* Obrigatório *</span></label>
+                <br>
+                <input type="text" placeholder="Nome da Rua" id="rua" class="endereco" >
+                <br>
+                <label>Número: <span class="obrigatorio">* Obrigatório *</span></label>
+                <br>
+                <input type="number" placeholder="N°" id="numeroCasa" class="numero_casa" >
+                <br>
+                <label>Complemento:</label>
+                <input type="text" placeholder="Complemento" id="complemento" class="endereco">
+                <br>
+                <p class="taxa-entrega"> Taxa de Entrega: R$ 7,00</p>
+            </div>
 
-                <hr>
-                <div>
-                    <p class="endereco-txt">Digite o Endereço para entrega</p>
-                    <label>Bairro:</label>
-                    <br>
-                    <input type="text" placeholder="Nome do Bairro" id="bairro" class="bairro" required>
-                    <br>
-                    <label>Rua:</label>
-                    <br>
-                    <input type="text" placeholder="Nome da Rua" id="rua" class="endereco" required>
-                    <br>
-                    <label>Número:</label>
-                    <br>
-                    <input type="number" placeholder="N°" id="numeroCasa" class="numero_casa" required>
-                    <br>
-                    <label>Complemento:</label>
-                    <input type="text" placeholder="Complemento" id="complemento" class="endereco">
-                    <br>
-                    <p class="taxa-entrega"> Taxa de Entrega: R$ 7,00</p>
+            <hr>
+            <div class="valor" id="total">Valor a Pagar:</div>
+            <div class="text-start">
+                <p>Selecione a forma de Pagamento:</p>
+                <div class="form-check text-start">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label " for="flexRadioDefault2"> Cartão </label>
                 </div>
-
-                <hr>
-                <div class="valor" id="total">Valor a Pagar:</div>
-                <div class="text-start">
-                    <p>Selecione a forma de Pagamento:</p>
-                    <div class="form-check text-start">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
-                            checked>
-                        <label class="form-check-label " for="flexRadioDefault2"> Cartão </label>
-                    </div>
-                    <div class="form-check text-start">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label " for="flexRadioDefault1"> Dinheiro </label>
-                    </div>
-                    <label>Troco para:</label>
-                    <input type="number" placeholder="R$" class="troco text-start" id="troco">
+                <div class="form-check text-start">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label " for="flexRadioDefault1"> Dinheiro </label>
                 </div>
-                <button class="btn btn-primary btn-enviar" onclick="enviarPedido()">
-                    <a href="" id="linkPedido" class="btn-enviar" >Enviar Pedido</a>
-                </button>
+                <label>Troco para:</label>
+                <input type="number" placeholder="R$" class="troco text-start" id="troco">
+            </div>
+            <button class="btn btn-primary btn-enviar" onclick="enviarPedido()">
+                <a href="" id="linkPedido" class="btn-enviar">Enviar Pedido</a>
+            </button>
         </div>
         <br>
     </div>
 
 
-<!-- Menu e o botão do modo noturno -->
+    <!-- Menu e o botão do modo noturno -->
     <div class="d-flex justify-content-between div_subtitulo">
         <h2 class="subtitulo">Menu</h2>
         <div class="form-check form-switch">
@@ -117,7 +116,7 @@
     <hr class="linha">
 
 
-<!-- Blocos para selecionar quais produtos mostrar na tela -->
+    <!-- Blocos para selecionar quais produtos mostrar na tela -->
     <div class="btn-mostrar text-center">
         <div class="col">
             <button class="button-prod link-btn" onclick="mostrarTodos()">Todos</button>
@@ -131,7 +130,7 @@
     </div>
 
 
-<!-- Lista com todos produtos cadastrados / cada section = 1 produto  -->
+    <!-- Lista com todos produtos cadastrados / cada section = 1 produto  -->
     <main id="todosProd">
         <section class="produtos" id="lanches">
             <div class="item1"><img src="img/x-burg.jpg" alt="x-burg" width="80px" height="auto"></div>
