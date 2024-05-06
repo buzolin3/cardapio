@@ -93,7 +93,6 @@ function enviarPedido() {
     var rua = document.getElementById("rua").value;
     var numeroCasa = document.getElementById("numeroCasa").value;
     var complemento = document.getElementById("complemento").value;
-    var link = document.getElementById("linkPedido");
     
     //Verifica se escolheu cartão ou dinheiro e o troco
     if(cartaoRadio.checked){
@@ -102,22 +101,25 @@ function enviarPedido() {
         opcaoPagamento = "Dinheiro " + "%0a" + "%0a" + "Troco para: " + troco ;
     }
 
+    //API para enviar para Whatsapp
+    var link = "https://api.whatsapp.com/send/?phone=16997036661&text=" +
+    "Pedido" + "%0a" + 
+    "%0a" + "Nome do Cliente: " + nome + "%0a" +
+    "%0a" + "Celular: " + celular + "%0a" +
+    "%0a" + "Produtos Selecionados: " + carrinho + "%0a" +
+    "%0a" + "Observação: " + observacao + "%0a" +
+    "%0a" + "Valor a pagar: " + totalCompra +  "%0a" +
+    "%0a" + "Opção Pagamento: " + opcaoPagamento + "%0a" +
+    "%0a" + "Bairro: " + bairro + "%0a" +
+    "%0a" + "Rua: " + rua + "%0a" +
+    "%0a" + "Numero Casa: " + numeroCasa + "%0a" +
+    "%0a" + "Complemento: " + complemento; "%0a" ;
+
     //Verificando se todos campos obrigatorios foram preenchidos
     if (nome.trim() === "" || celular.trim() === "" || bairro.trim() === "" || rua.trim() === "" || numeroCasa.trim() === "" ) {
-        alert("Por favor, preencha todos os campos obrigatórios.");
+        var txtObrigatorio = document.getElementById("txtObrigatorio").innerHTML="Por favor, preencha todos os campos obrigatórios.";
+        alert("Por favor, preencha todos os campos obrigatórios.")
     } else {
-        //API para enviar para Whatsapp
-        link.href = "https://api.whatsapp.com/send/?phone=16997036661&text=" +
-        "Pedido" + "%0a" + 
-        "%0a" + "Nome do Cliente: " + nome + "%0a" +
-        "%0a" + "Celular: " + celular + "%0a" +
-        "%0a" + "Produtos Selecionados: " + carrinho + "%0a" +
-        "%0a" + "Observação: " + observacao + "%0a" +
-        "%0a" + "Valor a pagar: " + totalCompra +  "%0a" +
-        "%0a" + "Opção Pagamento: " + opcaoPagamento + "%0a" +
-        "%0a" + "Bairro: " + bairro + "%0a" +
-        "%0a" + "Rua: " + rua + "%0a" +
-        "%0a" + "Numero Casa: " + numeroCasa + "%0a" +
-        "%0a" + "Complemento: " + complemento; "%0a" ;
+        window.location.href = link;
     }
 }
