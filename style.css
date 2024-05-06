@@ -74,8 +74,13 @@ p {
 
 /* NavBar CSS */
 .navbar {
+    position: fixed;
     background-color: var(--cor-fundo);
     color: white;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 .navbar-brand {
@@ -93,6 +98,7 @@ p {
 /* Menu modo noturno */
 .div_subtitulo {
     margin: 10px;
+    padding-top: 80px;
 }
 
 .subtitulo {
@@ -216,7 +222,7 @@ p {
     font-size: 26px;
 }
 
-.item5:hover {
+.item5:active {
     background-color: rgb(105, 0, 0);
 }
 
