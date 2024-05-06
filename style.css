@@ -220,6 +220,7 @@ p {
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.356);
     color: white;
     font-size: 26px;
+    transition: background-color 0.1s;
 }
 
 .item5:active {
