@@ -4,7 +4,6 @@ var numero = 0;
 var totalElement;
 const inputCheck = document.querySelector("#modo-noturno");
 const elemento = document.querySelector("body");
-const botaoCor = document.getElementById("item5");
 var carrinho = [];
 
 
@@ -78,12 +77,6 @@ function produto(nomeProduto , valorProduto) {
 
     totalCompra += valorProduto;
     valorTxt.textContent = "Valor a pagar:  R$ " + totalCompra.toFixed(2);
-
-    botaoCor.classList.add("clicked");
-
-    setTimeout(function() {
-        botaoCor.classList.remove("clicked");
-    }, 120);
 }
 
 
