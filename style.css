@@ -223,7 +223,7 @@ p {
     transition: background-color 0.1s;
 }
 
-.item5:active {
+#item5.clicked{
     background-color: rgb(105, 0, 0);
 }
 
