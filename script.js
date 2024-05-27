@@ -57,6 +57,7 @@ function produto(nomeProduto , valorProduto) {
     mensagemProduto.textContent = "1 - " + nomeProduto;
     carrinho.push("%0a" + nomeProduto);
     produtosAdicionados.appendChild(mensagemProduto);
+    alert("Produto Adicionado ao Carrinho")
 
     numero++;
     (document.getElementById("numero-carrinho").innerHTML = numero);
