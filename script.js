@@ -103,7 +103,7 @@ function enviarPedido() {
     }
 
     //API para enviar para Whatsapp
-    var link = "https://api.whatsapp.com/send/?phone=16997036661&text=" +
+    var link = "https://api.whatsapp.com/send/?phone=16997417362&text=" +
     "Pedido" + "%0a" + 
     "%0a" + "Nome do Cliente: " + nome + "%0a" +
     "%0a" + "Celular: " + celular + "%0a" +
