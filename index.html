@@ -137,11 +137,11 @@
                 <p>X-Burguer</p>
                 <hr class="linha_prod">
             </div>
-            <div class="item3">R$ <span id="val1">14,00</span></div>
+            <div class="item3">R$ <span id="val1">15,00</span></div>
             <div class="item4">
-                <p>Pão, hamburgue, queijo, ketchup, maionese, mostrarda</p>
+                <p>Pão, hamburguer e duas fatias de queijo</p>
             </div>
-            <button class="item5" onclick="produto('X-Burguer', 14)">+</button>
+            <button class="item5" onclick="produto('X-Burguer', 15)">+</button>
         </section>
 
         <section class="produtos" id="lanches">
@@ -150,24 +150,11 @@
                 <p>X-Salada</p>
                 <hr class="linha_prod">
             </div>
-            <div class="item3" id="val2">R$ 16,00</div>
+            <div class="item3" id="val2">R$ 17,00</div>
             <div class="item4">
-                <p>Pão, hamburgue, queijo, alface, tomate, cebola, bacon</p>
+                <p>Pão, hamburguer, queijo, alface e tomate</p>
             </div>
-            <button type="button" class="item5" onclick="produto('X-Salada', 16)">+</button>
-        </section>
-
-        <section class="produtos" id="lanches">
-            <div class="item1"><img src="img/x-tudo.jpeg" alt="x-burg" width="80px" height="auto"></div>
-            <div class="item2">
-                <p>X-Tudo</p>
-                <hr class="linha_prod">
-            </div>
-            <div class="item3" id="val3">R$ 19,00</div>
-            <div class="item4">
-                <p>Pão, hamburgue, queijo, alface, tomate, cebola, bacon, ovo, requeijão, salsicha</p>
-            </div>
-            <button class="item5" onclick="produto('X-Tudo', 19)">+</button>
+            <button type="button" class="item5" onclick="produto('X-Salada', 17)">+</button>
         </section>
 
         <section class="produtos" id="lanches">
@@ -176,11 +163,37 @@
                 <p>X-Egg</p>
                 <hr class="linha_prod">
             </div>
-            <div class="item3">R$ 16,00</div>
+            <div class="item3">R$ 17,00</div>
             <div class="item4">
-                <p>Pão, hamburgue, queijo, alface, tomate, cebola, bacon, ovo</p>
+                <p>Pão, hamburguer, queijo e ovo</p>
             </div>
-            <button class="item5" onclick="produto('X-Egg', 16)">+</button>
+            <button class="item5" onclick="produto('X-Egg', 17)">+</button>
+        </section>
+
+        <section class="produtos" id="lanches">
+            <div class="item1"><img src="img/x-egg.jpeg" alt="x-burg" width="80px" height="auto"></div>
+            <div class="item2">
+                <p class="titulo-grande">X-Salada Egg</p>
+                <hr class="linha_prod">
+            </div>
+            <div class="item3">R$ 19,00</div>
+            <div class="item4">
+                <p>Pão, hamburguer, queijo, alface, tomate e ovo</p>
+            </div>
+            <button class="item5" onclick="produto('X-Salada-Egg', 19)">+</button>
+        </section>
+
+        <section class="produtos" id="lanches">
+            <div class="item1"><img src="img/x-egg.jpeg" alt="x-burg" width="80px" height="auto"></div>
+            <div class="item2">
+                <p class="titulo-grande">X-Salada-Bacon</p>
+                <hr class="linha_prod">
+            </div>
+            <div class="item3">R$ 21,00</div>
+            <div class="item4">
+                <p>Pão, hamburguer, queijo, alface, tomate e bacon</p>
+            </div>
+            <button class="item5" onclick="produto('X-Salada-Bacon', 21)">+</button>
         </section>
 
         <section class="produtos" id="lanches">
@@ -189,89 +202,245 @@
                 <p>X-Bacon</p>
                 <hr class="linha_prod">
             </div>
-            <div class="item3">R$ 15,00</div>
+            <div class="item3">R$ 19,00</div>
             <div class="item4">
-                <p>Pão, hamburgue, queijo, alface, tomate, cebola, bacon</p>
+                <p>Pão, hamburguer, queijo, maionese e bacon</p>
             </div>
-            <button class="item5" onclick="produto('X-Bacon', 15)">+</button>
+            <button class="item5" onclick="produto('X-Bacon', 19)">+</button>
         </section>
 
         <section class="produtos" id="lanches">
-            <div class="item1"><img src="img/x-costela.jpeg" alt="x-burg" width="80px" height="auto"></div>
+            <div class="item1"><img src="img/x-bacon.jpeg" alt="x-burg" width="80px" height="auto"></div>
             <div class="item2">
-                <p>X-Costela</p>
+                <p class="titulo-grande">X-Bacon-Egg</p>
                 <hr class="linha_prod">
             </div>
-            <div class="item3">R$ 22,00</div>
+            <div class="item3">R$ 21,00</div>
             <div class="item4">
-                <p>Pão, costela, queijo, alface, tomate, bacon</p>
+                <p>Pão, hamburguer, queijo, bacon e ovo</p>
             </div>
-            <button class="item5" onclick="produto('X-Costela', 22)">+</button>
+            <button class="item5" onclick="produto('X-Bacon-Egg', 21)">+</button>
         </section>
 
         <section class="produtos" id="lanches">
-            <div class="item1"><img src="img/hot-dog.jpeg" alt="x-burg" width="80px" height="auto"></div>
+            <div class="item1"><img src="img/x-tudo.jpeg" alt="x-burg" width="80px" height="auto"></div>
             <div class="item2">
-                <p>Hot-Dog</p>
+                <p>X-Tudo</p>
                 <hr class="linha_prod">
             </div>
-            <div class="item3">R$ 14,00</div>
+            <div class="item3" id="val3">R$ 23,00</div>
             <div class="item4">
-                <p>Pão, 2 salsicha, tomate, requeijão, cathup, mostrarda, maionese, batata-palha</p>
+                <p>Pão, hamburguer, queijo, presunto, alface, tomate, bacon e ovo</p>
             </div>
-            <button class="item5" onclick="produto('Hot-Dog', 14)">+</button>
+            <button class="item5" onclick="produto('X-Tudo', 23)">+</button>
         </section>
 
         <section class="produtos" id="lanches">
-            <div class="item1"><img src="img/hot-dog2.jpeg" alt="x-burg" width="80px" height="auto"></div>
+            <div class="item1"><img src="img/x-tudo.jpeg" alt="x-burg" width="80px" height="auto"></div>
             <div class="item2">
-                <p>Hot-Dog Especial</p>
+                <p class="titulo-grande">X-Tudo Duplo</p>
                 <hr class="linha_prod">
             </div>
-            <div class="item3">R$ 18,00</div>
+            <div class="item3" id="val3">R$ 30,00</div>
             <div class="item4">
-                <p>Pão, 2 salsicha, tomate, bacon, requeijão, cathup, mostrarda, maionese, batata-palha</p>
+                <p>Pão, 2 hamburgueres, queijo, presunto, alface, tomate, bacon e 2 ovos</p>
             </div>
-            <button class="item5" onclick="produto('Hot-Dog Especial', 18)">+</button>
+            <button class="item5" onclick="produto('X-Tudo-Duplo', 30)">+</button>
+        </section>
+
+        <section class="produtos" id="lanches">
+            <div class="item1"><img src="img/x-tudo.jpeg" alt="x-burg" width="80px" height="auto"></div>
+            <div class="item2">
+                <p class="titulo-grande">X-Tudo Especial</p>
+                <hr class="linha_prod">
+            </div>
+            <div class="item3" id="val3">R$ 34,00</div>
+            <div class="item4">
+                <p>Pão, 2 hamburgueres, queijo, presunto, alface, tomate, bacon, ovo, milho, batata palha e catupiry</p>
+            </div>
+            <button class="item5" onclick="produto('X-Tudo-Especial', 34)">+</button>
+        </section>
+
+        <section class="produtos" id="lanches">
+            <div class="item1"><img src="img/x-burg.jpg" alt="x-burg" width="80px" height="auto"></div>
+            <div class="item2">
+                <p class="titulo-grande">X-Costela</p>
+                <hr class="linha_prod">
+            </div>
+            <div class="item3">R$ <span id="val1">17,00</span></div>
+            <div class="item4">
+                <p>Pão, Costela e queijo</p>
+            </div>
+            <button class="item5" onclick="produto('X-Costela', 17)">+</button>
+        </section>
+
+        <section class="produtos" id="lanches">
+            <div class="item1"><img src="img/x-salada.jpeg" alt="x-burg" width="80px" height="auto"></div>
+            <div class="item2">
+                <p>X-Costela Salada</p>
+                <hr class="linha_prod">
+            </div>
+            <div class="item3" id="val2">R$ 19,00</div>
+            <div class="item4">
+                <p>Pão, Costela, queijo, alface e tomate</p>
+            </div>
+            <button type="button" class="item5" onclick="produto('X-Costela-Salada', 19)">+</button>
+        </section>
+
+        <section class="produtos" id="lanches">
+            <div class="item1"><img src="img/x-egg.jpeg" alt="x-burg" width="80px" height="auto"></div>
+            <div class="item2">
+                <p>X-Costela Egg</p>
+                <hr class="linha_prod">
+            </div>
+            <div class="item3">R$ 19,00</div>
+            <div class="item4">
+                <p>Pão, Costela, queijo e ovo</p>
+            </div>
+            <button class="item5" onclick="produto('X-Costela-Egg', 19)">+</button>
+        </section>
+
+        <section class="produtos" id="lanches">
+            <div class="item1"><img src="img/x-egg.jpeg" alt="x-burg" width="80px" height="auto"></div>
+            <div class="item2">
+                <p class="titulo-grande">X-Costela Salada Egg</p>
+                <hr class="linha_prod">
+            </div>
+            <div class="item3">R$ 21,00</div>
+            <div class="item4">
+                <p>Pão, Costela, queijo, alface, tomate e ovo</p>
+            </div>
+            <button class="item5" onclick="produto('X-Costela-Salada-Egg', 21)">+</button>
+        </section>
+
+        <section class="produtos" id="lanches">
+            <div class="item1"><img src="img/x-egg.jpeg" alt="x-burg" width="80px" height="auto"></div>
+            <div class="item2">
+                <p class="titulo-grande">X-Costela Salada Bacon</p>
+                <hr class="linha_prod">
+            </div>
+            <div class="item3">R$ 23,00</div>
+            <div class="item4">
+                <p>Pão, costela, queijo, alface, tomate e bacon</p>
+            </div>
+            <button class="item5" onclick="produto('X-Costela-Salada-Bacon', 23)">+</button>
+        </section>
+
+        <section class="produtos" id="lanches">
+            <div class="item1"><img src="img/x-bacon.jpeg" alt="x-burg" width="80px" height="auto"></div>
+            <div class="item2">
+                <p>X-Costela Bacon</p>
+                <hr class="linha_prod">
+            </div>
+            <div class="item3">R$ 21,00</div>
+            <div class="item4">
+                <p>Pão, Costela, queijo, e bacon</p>
+            </div>
+            <button class="item5" onclick="produto('X-Costela-Bacon', 21)">+</button>
+        </section>
+
+        <section class="produtos" id="lanches">
+            <div class="item1"><img src="img/x-bacon.jpeg" alt="x-burg" width="80px" height="auto"></div>
+            <div class="item2">
+                <p class="titulo-grande">X-Costela-Bacon-Egg</p>
+                <hr class="linha_prod">
+            </div>
+            <div class="item3">R$ 23,00</div>
+            <div class="item4">
+                <p>Pão, Costela, queijo, bacon e ovo</p>
+            </div>
+            <button class="item5" onclick="produto('X-Costela-Bacon-Egg', 23)">+</button>
+        </section>
+
+        <section class="produtos" id="lanches">
+            <div class="item1"><img src="img/x-tudo.jpeg" alt="x-burg" width="80px" height="auto"></div>
+            <div class="item2">
+                <p>X-Costela-Tudo</p>
+                <hr class="linha_prod">
+            </div>
+            <div class="item3" id="val3">R$ 25,00</div>
+            <div class="item4">
+                <p>Pão, costela, queijo, presunto, alface, tomate, bacon e ovo</p>
+            </div>
+            <button class="item5" onclick="produto('X-Costela-Tudo', 25)">+</button>
         </section>
 
         <section class="produtos" id="bebidas">
             <div class="item1"><img src="img/coca-lata.jpeg" alt="x-burg" width="80px" height="auto"></div>
             <div class="item2">
-                <p>Coca-Cola </p>
+                <p>Coca-Cola Lata</p>
                 <hr class="linha_prod">
             </div>
-            <div class="item3">R$ 5,00</div>
+            <div class="item3">R$ 6,00</div>
             <div class="item4">
                 <p>Lata 350ml</p>
             </div>
-            <button class="item5" onclick="produto('Coca-Cola Lata', 5)">+</button>
+            <button class="item5" onclick="produto('Coca-Cola Lata', 6)">+</button>
+        </section>
+
+        <section class="produtos" id="bebidas">
+            <div class="item1"><img src="img/guarana-lata.png" alt="x-burg" width="80px" height="auto"></div>
+            <div class="item2">
+                <p>Guaraná Lata</p>
+                <hr class="linha_prod">
+            </div>
+            <div class="item3">R$ 6,00</div>
+            <div class="item4">
+                <p>Lata 350ml</p>
+            </div>
+            <button class="item5" onclick="produto('Guaraná Lata', 6)">+</button>
+        </section>
+
+        <section class="produtos" id="bebidas">
+            <div class="item1"><img src="img/fanta-lata.png" alt="x-burg" width="80px" height="auto"></div>
+            <div class="item2">
+                <p class="titulo-grande">Fanta Laranja Lata</p>
+                <hr class="linha_prod">
+            </div>
+            <div class="item3">R$ 6,00</div>
+            <div class="item4">
+                <p>Lata 350ml</p>
+            </div>
+            <button class="item5" onclick="produto('Fanta Laranja Lata', 6)">+</button>
         </section>
 
         <section class="produtos" id="bebidas">
             <div class="item1"><img src="img/coca-2l.jpeg" alt="x-burg" width="80px" height="auto"></div>
             <div class="item2">
-                <p>Coca-Cola </p>
+                <p>Coca-Cola 2 litros</p>
                 <hr class="linha_prod">
             </div>
-            <div class="item3">R$ 12,00</div>
+            <div class="item3">R$ 14,00</div>
             <div class="item4">
                 <p>Garrafa 2 Litros</p>
             </div>
-            <button class="item5" onclick="produto('Coca-Cola 2 Litros', 12)">+</button>
+            <button class="item5" onclick="produto('Coca-Cola 2 Litros', 14)">+</button>
         </section>
 
         <section class="produtos" id="bebidas">
             <div class="item1"><img src="img/guarana-2l.jpeg" alt="x-burg" width="80px" height="auto"></div>
             <div class="item2">
-                <p>Guaraná </p>
+                <p>Guaraná 2 litros</p>
+                <hr class="linha_prod">
+            </div>
+            <div class="item3">R$ 8,00</div>
+            <div class="item4">
+                <p>Garrafa 2 Litros</p>
+            </div>
+            <button class="item5" onclick="produto('Guaraná 2 Litros', 8)">+</button>
+        </section>
+
+        <section class="produtos" id="bebidas">
+            <div class="item1"><img src="img/fanta-2l.png" alt="x-burg" width="80px" height="auto"></div>
+            <div class="item2">
+                <p>Fanta 2 litros </p>
                 <hr class="linha_prod">
             </div>
             <div class="item3">R$ 12,00</div>
             <div class="item4">
                 <p>Garrafa 2 Litros</p>
             </div>
-            <button class="item5" onclick="produto('Guaraná 2 Litros', 12)">+</button>
+            <button class="item5" onclick="produto('Fanta 2 Litros', 12)">+</button>
         </section>
 
         <section class="produtos" id="bebidas">
@@ -280,50 +449,24 @@
                 <p>Água</p>
                 <hr class="linha_prod">
             </div>
-            <div class="item3">R$ 3,00</div>
+            <div class="item3">R$ 2,50</div>
             <div class="item4">
                 <p>Garrafa 500ml</p>
             </div>
-            <button class="item5" onclick="produto('Água', 3)">+</button>
+            <button class="item5" onclick="produto('Água', 2.5)">+</button>
         </section>
 
         <section class="produtos" id="bebidas">
-            <div class="item1"><img src="img/agia-gas.jpeg" alt="x-burg" width="80px" height="auto"></div>
+            <div class="item1"><img src="img/suco-del-valle-450ml-frut-frutas-citrica_95572.png" alt="x-burg" width="80px" height="auto"></div>
             <div class="item2">
-                <p>Água com Gás</p>
+                <p>Suco</p>
                 <hr class="linha_prod">
             </div>
             <div class="item3">R$ 4,00</div>
             <div class="item4">
-                <p>Garrafa 500ml</p>
+                <p>Suco garrafa 450ml</p>
             </div>
             <button class="item5" onclick="produto('Água Com Gás', 4)">+</button>
-        </section>
-
-        <section class="produtos" id="bebidas">
-            <div class="item1"><img src="img/brahma-lata.jpeg" alt="x-burg" width="80px" height="auto"></div>
-            <div class="item2">
-                <p>Brahma </p>
-                <hr class="linha_prod">
-            </div>
-            <div class="item3">R$ 5,00</div>
-            <div class="item4">
-                <p>Lata 350ml</p>
-            </div>
-            <button class="item5" onclick="produto('Brahma-Lata', 5)">+</button>
-        </section>
-
-        <section class="produtos" id="bebidas">
-            <div class="item1"><img src="img/heinekein-lata.jpeg" alt="x-burg" width="80px" height="auto"></div>
-            <div class="item2">
-                <p>Heineken</p>
-                <hr class="linha_prod">
-            </div>
-            <div class="item3">R$ 8,00</div>
-            <div class="item4">
-                <p>Lata 350ml</p>
-            </div>
-            <button class="item5" onclick="produto('Heineken-Lata', 8)">+</button>
         </section>
 
     </main>

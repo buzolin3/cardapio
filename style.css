@@ -170,6 +170,10 @@ p {
     padding: 10px;
 }
 
+.titulo-grande{
+    font-size: 18px;
+}
+
 .item1 {
     text-align: center;
     align-items: center;
